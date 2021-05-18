@@ -1,16 +1,12 @@
-import React from 'react'
-import Diagram from "./pages/Diagram";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import React from 'react';
+import Base from './components/Base';
+import { UserInput } from './components/UserInput';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path='/'>
-          <Diagram/>
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <div className="bg-gray-100 h-screen">
+      <Base />
+    </div>
   );
 };
 
