@@ -23,3 +23,6 @@ export interface ISession {
     slots: string[];
     vaccine: string;
 }
+export interface ICenterData extends ISession {
+    center_name: string;
+}
