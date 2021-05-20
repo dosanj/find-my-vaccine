@@ -4,15 +4,10 @@ import { ICenterData } from '../models/vaccine-center.model'
 export default function VaccineCenters({ centers, pincode }: { centers: ICenterData[]; pincode: string }) {
   return (
     <div
-      className={`flex flex-col mt-8 transition-height duration-1000 ease-linear overflow-hidden ${
+      className={`flex flex-col mt-8 overflow-hidden transition-all duration-1000 ease-in ${
         !!centers.length ? 'flex-1' : 'h-0'
       }`}
     >
-      {!!centers.length && (
-        <h3 className="text-xl leading-7 text-gray-500 sm:text-2xl text-wrap mb-4 mx-auto text-center h-16">
-          Vaccines available next week in pincode: <span className="text-gray-900">{pincode}</span>{' '}
-        </h3>
-      )}
       <table className="min-w-full divide-y  divide-gray-200 overflow-x-auto overflow-y-scroll border-gray-200 rounded-md shadow flex-1">
         <thead className="bg-blue-100">
           <tr>
