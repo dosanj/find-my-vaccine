@@ -9,5 +9,6 @@ const uniquePinCodes = pincodes.filter(code => {
     return true;
 })
 export default async (req: VercelRequest, res: VercelResponse) => {
-    res.json({ uniquePinCodes });
+    const {code} = req.body;
+    res.json({ results: uniquePinCodes.filter(({Pincode}) => Pincode.includes(code)) });
 };
