@@ -4,11 +4,9 @@ import { ICenterData } from '../models/vaccine-center.model'
 export default function VaccineCenters({ centers, pincode }: { centers: ICenterData[]; pincode: string }) {
   return (
     <div
-      className={`flex flex-col mt-8 overflow-hidden transition-all duration-1000 ease-in ${
-        !!centers.length ? 'flex-1' : 'h-0'
-      }`}
+      className={`flex flex-col overflow-y-auto transition-all duration-1000 ${!!centers.length ? 'flex-1' : 'h-0'}`}
     >
-      <table className="min-w-full divide-y  divide-gray-200 overflow-x-auto overflow-y-scroll border-gray-200 rounded-md shadow flex-1">
+      <table className="min-w-full divide-y  divide-gray-200 overflow-x-auto overflow-y-scroll border-gray-200 rounded-md shadow">
         <thead className="bg-blue-100">
           <tr>
             <th scope="col" className="table-head-text hide-cell-in-mobile">

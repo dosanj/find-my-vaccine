@@ -42,7 +42,7 @@ export function UserInput({ getCenters }: IUserInputProps) {
   }
 
   return (
-    <div className="mb-4 flex-1 flex flex-col justify-center">
+    <div className="flex flex-col justify-center">
       <>
         <img
           className="mx-auto w-auto h-16"
