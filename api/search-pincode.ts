@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import pincodeDirectory from 'india-pincode-lookup';
+import {pincodes} from './pincodes';
 export default async (req: VercelRequest, res: VercelResponse) => {
-    res.json({ message: pincodeDirectory.lookup(445204) });
+    res.json({ message: pincodes[0] });
 };
